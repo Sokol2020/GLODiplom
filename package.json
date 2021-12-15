@@ -1,5 +1,5 @@
 {
-  "name": "lesson01",
+  "name": "glodiplom",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sokol2020/lesson01.git"
+    "url": "git+https://github.com/Sokol2020/GLODiplom.git"
   },
-  "author": "",
+  "author": "Sergey Pankovets",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sokol2020/lesson01/issues"
+    "url": "https://github.com/Sokol2020/GLODiplom/issues"
   },
-  "homepage": "https://github.com/Sokol2020/lesson01#readme",
+  "homepage": "https://github.com/Sokol2020/GLODiplom#readme",
   "devDependencies": {
-    "webpack": "^5.64.0",
+    "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1"
   }
 }
