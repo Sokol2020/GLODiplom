@@ -537,7 +537,6 @@ input.error {
   background-color: #466a78;
 }
 .service-block {
-  display: none;
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -1630,7 +1629,6 @@ input.error {
 }
 
 .benefits__item {
-  display: none;
   width: 100%;
   max-width: 185px;
 }
