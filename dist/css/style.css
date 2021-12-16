@@ -39,6 +39,7 @@ h3 {
 .img-responsive {
   display: inline-block;
 }
+
 .phone-icon {
   background: url("../images/phone.png") no-repeat;
   display: inline-block;
@@ -536,11 +537,17 @@ input.error {
   background-color: #466a78;
 }
 .service-block {
+  display: none;
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   margin: 30px 20px 30px;
 }
+
+.service-block-active {
+  display: block;
+}
+
 .service-image img {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -788,9 +795,10 @@ p.services-image_mobile {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: 0px;
   opacity: 0;
 }
+
 .document-inner:hover .document-overlay {
   opacity: 1;
   transition: opacity 0.3s linear;
@@ -1534,6 +1542,10 @@ input.error {
   display: none;
 }
 
+.sert-modal {
+  display: none;
+}
+
 .services-modal {
   display: none;
 }
@@ -1552,6 +1564,27 @@ input.error {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
+}
+
+.sert-modal--opened {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.sert-modal__close {
+  position: absolute;
+  top: 5px;
+  right: 15%;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.sert-modal__close:hover {
+  color: rgba(0, 0, 0, 0.35);
 }
 
 .header-modal__close {
@@ -1592,13 +1625,18 @@ input.error {
 
 .benefits-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
 }
 
 .benefits__item {
+  display: none;
   width: 100%;
   max-width: 185px;
+}
+
+.benefits__item-active {
+  display: block;
 }
 
 .benefits-arrows {
@@ -1659,11 +1697,11 @@ input.error {
 }
 
 .smooth-scroll {
+  display: none;
   position: fixed;
   right: 25px;
   bottom: 25px;
   transform: rotate(90deg);
-  display: none;
 }
 
 @media (min-width: 576px) {
