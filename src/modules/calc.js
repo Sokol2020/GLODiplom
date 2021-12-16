@@ -7,8 +7,7 @@ const calc = () => {
 
   const countCalc = () => {
     const calcTypeValue = +calcType.options[calcType.selectedIndex].value;
-    const calcMaterialValue =
-      +calcMaterial.options[calcMaterial.selectedIndex].value;
+    const calcMaterialValue = +calcMaterial.options[calcMaterial.selectedIndex].value;
     const calcInputValue = calcInput.value;
 
     let calcTotalValue = 0;
