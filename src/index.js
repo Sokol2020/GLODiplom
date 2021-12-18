@@ -5,7 +5,6 @@ import calc from './modules/calc'
 import checkForms from './modules/checkForms'
 import slider from './modules/slider'
 
-
 timer(`23 december 2021`);
 smoothScroll();
 modal();
