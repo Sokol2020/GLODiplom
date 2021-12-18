@@ -8,7 +8,7 @@ const slider = ({
   slideArrowRight,
 }) => {
   const sliderBlock = document.getElementById(`${sliderBlockId}`);
-  const slides = document.querySelectorAll(`.${slidesClass}`);
+  const slides = document.querySelectorAll(`.${slidesClass}`); 
 
   let currentSlide = 0;
   let documentSize = true;
