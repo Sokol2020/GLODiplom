@@ -13,21 +13,33 @@ const slider = ({
   let currentSlide = 0;
   let documentSize = true;
 
-  if (document.documentElement.clientWidth >= 576) {
-    if (slides.length >= 6) {
-      slides[0].classList.add(`${slideActiveClass}`);
-      slides[1].classList.add(`${slideActiveClass}`);
-      slides[2].classList.add(`${slideActiveClass}`);
-      documentSize = true;
-    } else if (slides.length < 6) {
-      slides[0].classList.add(`${slideActiveClass}`);
-      slides[1].classList.add(`${slideActiveClass}`);
-      documentSize = true;
+
+  const sliderSizing = () => {
+      if (document.documentElement.clientWidth < 576) {
+        slides[0].classList.add(`${slideActiveClass}`);
+        documentSize = false;
+      } 
+      else if (document.documentElement.clientWidth >= 576) {
+        if (slides.length >= 6) {
+          slides[0].classList.add(`${slideActiveClass}`);
+          slides[1].classList.add(`${slideActiveClass}`);
+          slides[2].classList.add(`${slideActiveClass}`);
+          documentSize = true;
+        } else if (slides.length < 6) {
+          slides[0].classList.add(`${slideActiveClass}`);
+          slides[1].classList.add(`${slideActiveClass}`);
+          documentSize = true;
+        }
+      }   
+  };
+
+  sliderSizing();
+  window.addEventListener('resize', function(event) {
+    for(let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove(`${slideActiveClass}`);
     }
-  } else {
-    slides[0].classList.add(`${slideActiveClass}`);
-    documentSize = false;
-  }
+    sliderSizing();
+  }, true);
 
   const nextSlide = (elems, index, strClass) => {
     if (documentSize) {
@@ -91,17 +103,12 @@ const slider = ({
       },
       draw(progress) {
         slides.forEach((item) => {
-          if (slides.length <= 4) {
-            if (
-              e.target.closest(`.${slideArrowRight}`) ||
-              e.target.closest(`.${slideArrowLeft}`)
-            ) {
-              item.style.opacity = progress;
-              slides[0].style.right = 100 - 100 * progress + "%";
-              slides[1].style.left = 100 - 100 * progress + "%";
-              slides[2].style.right = 100 - 100 * progress + "%";
-              slides[3].style.left = 100 - 100 * progress + "%";
-            }
+          if (e.target.closest(`.${slideArrowRight}`) || e.target.closest(`.${slideArrowLeft}`)) {
+            item.style.opacity = progress;
+            slides[0].style.right = 100 - 100 * progress + "%";
+            slides[1].style.left = 100 - 100 * progress + "%";
+            slides[2].style.right = 100 - 100 * progress + "%";
+            slides[3].style.left = 100 - 100 * progress + "%";
           }
         });
       },
