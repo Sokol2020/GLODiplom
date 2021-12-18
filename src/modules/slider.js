@@ -13,7 +13,6 @@ const slider = ({
   let currentSlide = 0;
   let documentSize = true;
 
-
   const sliderSizing = () => {
       if (document.documentElement.clientWidth < 576) {
         slides[0].classList.add(`${slideActiveClass}`);
