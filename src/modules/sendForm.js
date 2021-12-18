@@ -80,7 +80,7 @@ const sendForm = ({ formId, someElem = [] }) => {
       statusBlock.textContent = errorText;
       statusBlock.style.color = "red";
       alert(
-        "Пожалуйста, заполните все поля и проверьте правильность введенных данных:)"
+        "Заполните все поля и проверьте правильность введенных данных"
       );
     }
   };
