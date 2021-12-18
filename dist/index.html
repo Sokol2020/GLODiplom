@@ -15,9 +15,9 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/animate.css" rel="stylesheet">
 	<title>Установка пластиковых (ПВХ) окон</title>
+	<script src="main.js" defer></script>
 	<meta name="keywords" content="пластиковые, окна, пвх, вставить, века, дом, профиль, поставить, установить, установка, стандартные, цветные, сайт, современные, купить, фирма, цены, дешевые, стоимость, остекление, монтаж">
 	<meta name="description" content="Окна в дом, квартиру или коттедж из пластикового (пвх) или алюминиевого профиля. Стандартные, цветные и с индивидуальным дизайном! Отличные цены и акции!">
-	<script src="./main.js" defer></script>
 
 </head>
 <body class="okna">
@@ -276,7 +276,7 @@
     					<div class="order-form rf">
     						<h3 class="order-form-heading">Оставить заявку</h3>
     						<div class="order-form-subheading">на получение скидки 20%</div>
-    						<form name="action-form" class="form-horizontal">
+    						<form name="action-form" class="form-horizontal" id="form1">
     							<div class="form-group">
     								<div class="col-sm-12">
     									<input type="text" name="fio" class="form-control required" placeholder="ваше имя">
@@ -464,7 +464,7 @@
     					<div class="order-form rf">
     						<h3 class="order-form-heading">Оставить заявку</h3>
     						<div class="order-form-subheading">на получение скидки 20%</div>
-    						<form name="action-form2" class="form-horizontal">
+    						<form name="action-form2" class="form-horizontal" id="form2">
     							<div class="form-group">
     								<div class="col-sm-12">
     									<input type="text" name="fio" class="form-control required" placeholder="ваше имя">
@@ -531,7 +531,7 @@
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            //iconImageHref: 'images/marker.png',
+            iconImageHref: 'images/marker.png',
             // Размеры метки.
             iconImageSize: [30, 42],
             // Смещение левого верхнего угла иконки относительно
@@ -580,7 +580,7 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
-            <form name="callback-form">
+            <form name="callback-form" id="form3">
                 <div class="form-group">
                     <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
@@ -603,7 +603,7 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку и мы свяжемся с Вами, чтобы рассказать детали акции и Вашу скидку!</p>
-            <form name="order-form">
+            <form name="order-form" id="form4">
                 <div class="form-group">
                     <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
@@ -626,7 +626,7 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
-            <form name="application-form">
+            <form name="application-form" id="form5">
                 <div class="form-group">
                     <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
@@ -642,6 +642,7 @@
             <span class="help-block">Гарантируем 100% конфиденциальность. Ваша информация не будет распространяться.</span>
         </div>
     </div>
+    
     
     <div class="box-modal" id="responseMessage">
         <div class="box-modal_title">
@@ -677,7 +678,7 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
-            <form name="callback-form">
+            <form name="callback-form" id="form6">
                 <div class="form-group">
                     <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
@@ -703,7 +704,7 @@
 			</div>
 			<div class="box-modal_body rf">
 				<p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
-				<form name="application-form">
+				<form name="application-form" id="form7">
 					<div class="form-group">
 						<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
 					</div>

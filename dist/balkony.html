@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-	<script src="./main.js" defer></script>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8">
@@ -16,6 +15,7 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/animate.css" rel="stylesheet">
 	<title>Остекление балконов и лоджий</title>
+	<script src="main.js" defer></script>
 	<meta name="keywords" content="остекление, алюминиевое, балконы, лоджии, застеклить, пластиковые, балконы, пвх, цена, утепление, отделка, акции">
 	<meta name="description" content="Установим балконы на балкон и лоджию из пластикового (пвх) или алюминиевого (al) профиля. Утепление и отделка под ключ! Отличные цены и акции!">
 
@@ -460,7 +460,7 @@
     					<div class="order-form rf">
     						<h3 class="order-form-heading">Оставить заявку</h3>
     						<div class="order-form-subheading">на получение скидки 20%</div>
-    						<form name="action-form" class="form-horizontal">
+    						<form name="action-form" class="form-horizontal" id="form1">
     							<div class="form-group">
     								<div class="col-sm-12">
     									<input type="text" name="fio" class="form-control required" placeholder="ваше имя">
@@ -648,7 +648,7 @@
     					<div class="order-form rf">
     						<h3 class="order-form-heading">Оставить заявку</h3>
     						<div class="order-form-subheading">на получение скидки 20%</div>
-    						<form name="action-form2" class="form-horizontal">
+    						<form name="action-form2" class="form-horizontal" id="form2">
     							<div class="form-group">
     								<div class="col-sm-12">
     									<input type="text" name="fio" class="form-control required" placeholder="ваше имя">
@@ -715,7 +715,7 @@
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            //iconImageHref: 'images/marker.png',
+            iconImageHref: 'images/marker.png',
             // Размеры метки.
             iconImageSize: [30, 42],
             // Смещение левого верхнего угла иконки относительно
@@ -764,7 +764,7 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
-            <form name="callback-form">
+            <form name="callback-form" id="form3">
                 <div class="form-group">
                     <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
@@ -787,7 +787,7 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку и мы свяжемся с Вами, чтобы рассказать детали акции и Вашу скидку!</p>
-            <form name="order-form">
+            <form name="order-form" id="form4">
                 <div class="form-group">
                     <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
@@ -810,7 +810,7 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
-            <form name="application-form">
+            <form name="application-form" id="form5">
                 <div class="form-group">
                     <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
@@ -841,17 +841,18 @@
 
 		<div class="overlay"></div>
 
-		<div class="sert-modal sert-modal--opened">
-      <div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
-        <div class="fancybox-outer" style="width: 100%">
-          <div class="fancybox-inner" style="overflow: hidden; width: 80%">
-      <img src="images/documents/original/document4.jpg" class="img-responsive" alt="">
-          </div>
-        </div>
-        <span title="Close" class="sert-modal__close">&#10006;</span>
-      </div>
-    </div>
 
+		<div class="sert-modal sert-modal--opened">
+			<div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
+				<div class="fancybox-outer" style="width: 100%">
+					<div class="fancybox-inner" style="overflow: hidden; width: 80%">
+			<img src="images/documents/original/document4.jpg" class="img-responsive" alt="">
+					</div>
+				</div>
+				<span title="Close" class="sert-modal__close">&#10006;</span>
+			</div>
+		</div>	
+		
 	<div class="header-modal header-modal--opened">
 		<div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
 			<div class="fancybox-outer">
@@ -862,7 +863,7 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
-            <form name="callback-form">
+            <form name="callback-form" id="form6">
                 <div class="form-group">
                     <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
                 </div>
@@ -888,7 +889,7 @@
 			</div>
 			<div class="box-modal_body rf">
 				<p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
-				<form name="application-form">
+				<form name="application-form" id="form7">
 					<div class="form-group">
 						<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
 					</div>
